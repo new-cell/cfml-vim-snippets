@@ -1,63 +1,63 @@
 snippet com
 	<!---${1:comment}--->
 snippet set
-	<cfset ${1:var} />${2}
+	<cfset ${1:var} />
 snippet fun
 	<cffunction name="${1}"${2: }>
-		${3:<!---$1 function body --->}
+		${0:<!---$1 function body --->}
 	</cffunction>
 snippet arg
 	<cfargument name="${1}" ${2}>
 snippet loopq
 	<cfloop query="${1:query}" >
-		${2}
+		${0}
 	</cfloop>
 snippet loopa
 	<cfloop array="#${1:array}#" index="${2}">
-		${3}
+		${0}
 	</cfloop>
 snippet loopi
 	<cfset ${3:i} = 0 />
 	<cfloop array="#${1:array}#" index="${2}">
 		<cfset $3 += 1 />
-		${4}
+		${0}
 	</cfloop>
 snippet for
 	<cfloop from="#${1}#" to="#${2}#" index="${3}">
-		${4}
+		${0}
 	</cfloop>
 snippet switch
 	<cfswitch expression="#${1}#">
 		<cfcase value="${2}">
-			${3}
+			${0}
 		</cfcase>
 		<cfdefaultcase>
 		</cfdefaultcase>
 	</cfswitch>
 snippet case
 	<cfcase value="${1}">
-		${2}
+		${0}
 	</cfcase>
 snippet if
 	<cfif ${1} >
-		${2}
+		${0}
 	</cfif>
 snippet ifel
 	<cfif ${1} >
-		${2}
+		${0}
 	<cfelse>
 	</cfif>
 snippet try
 	<cftry>
-		${1}
+		${0}
 		<cfcatch type="any e">
 		</cfcatch>
 	</cftry>
 snippet sfor
 	for (${1:i} = ${2:0}; $1 LTE ${3}; $1++) {
-		${4}
+		${0}
 	}
 snippet sif
 	if (${1}) {
-		${2}
+		${0}
 	}
