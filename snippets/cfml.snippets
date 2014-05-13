@@ -1,39 +1,31 @@
 snippet com
 	<!---${1:comment}--->
-
 snippet set
-	<cfset ${1:var} />
-
+	<cfset ${1:var} />${2}
 snippet fun
 	<cffunction name="${1}"${2: }>
 		${3:<!---$1 function body --->}
 	</cffunction>
-
 snippet arg
 	<cfargument name="${1}" ${2}>
-
 snippet loopq
 	<cfloop query="${1:query}" >
 		${2}
 	</cfloop>
-
 snippet loopa
 	<cfloop array="#${1:array}#" index="${2}">
 		${3}
 	</cfloop>
-
 snippet loopi
 	<cfset ${3:i} = 0 />
 	<cfloop array="#${1:array}#" index="${2}">
 		<cfset $3 += 1 />
 		${4}
 	</cfloop>
-
 snippet for
 	<cfloop from="#${1}#" to="#${2}#" index="${3}">
 		${4}
 	</cfloop>
-
 snippet switch
 	<cfswitch expression="#${1}#">
 		<cfcase value="${2}">
@@ -42,12 +34,10 @@ snippet switch
 		<cfdefaultcase>
 		</cfdefaultcase>
 	</cfswitch>
-
 snippet case
 	<cfcase value="${1}">
 		${2}
 	</cfcase>
-
 snippet if
 	<cfif ${1} >
 		${2}
@@ -57,19 +47,16 @@ snippet ifel
 		${2}
 	<cfelse>
 	</cfif>
-
 snippet try
 	<cftry>
 		${1}
 		<cfcatch type="any e">
 		</cfcatch>
 	</cftry>
-
 snippet sfor
 	for (${1:i} = ${2:0}; $1 LTE ${3}; $1++) {
 		${4}
 	}
-
 snippet sif
 	if (${1}) {
 		${2}
