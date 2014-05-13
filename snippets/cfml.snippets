@@ -6,11 +6,11 @@ snippet set
 
 snippet fun
 	<cffunction name="${1}"${2: }>
-		${3}
+		${3:<---$1 function body--->}
 	</cffunction>
 
 snippet arg
-	<cfargument name="${1}" ${2}>${3}
+	<cfargument name="${1}" ${2}>
 
 snippet loopq
 	<cfloop query="${1:query}" >
