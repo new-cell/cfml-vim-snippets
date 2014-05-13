@@ -1,0 +1,7 @@
+{
+  "name": "cfml-snipmate-snippets",
+  "author": "rparedes",
+  "maintainer": "rparedes @ bitbucket",
+  "repository": { "type": "git", "url": "git://github.com/new-cell.git" },
+  "description": { "colfusion 9+ snippets for vim-snipmate" }
+}
