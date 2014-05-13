@@ -5,72 +5,72 @@ snippet set
 	<cfset ${1:var} />
 
 snippet fun
-	<cffunction name="$1"${2: }>
-		$3
+	<cffunction name="${1}"${2: }>
+		${3}
 	</cffunction>
 
 snippet arg
-	<cfargument name="$1" $2>$3
+	<cfargument name="${1}" ${2}>${3}
 
 snippet loopq
 	<cfloop query="${1:query}" >
-		$2
+		${2}
 	</cfloop>
 
 snippet loopa
-	<cfloop array="#${1:array}#" index="$2">
-		$3
+	<cfloop array="#${1:array}#" index="${2}">
+		${3}
 	</cfloop>
 
 snippet loopi
 	<cfset ${3:i} = 0 />
-	<cfloop array="#${1:array}#" index="$2">
-		<cfset i += 1 />
-		$4
+	<cfloop array="#${1:array}#" index="${2}">
+		<cfset $3 += 1 />
+		${4}
 	</cfloop>
 
 snippet for
-	<cfloop from="#$1#" to="#$2#" index="$3">
-		$4
+	<cfloop from="#${1}#" to="#${2}#" index="${3}">
+		${4}
 	</cfloop>
 
 snippet switch
-	<cfswitch expression="#$1#">
-		<cfcase value="$2">
-			$3
+	<cfswitch expression="#${1}#">
+		<cfcase value="${2}">
+			${3}
 		</cfcase>
 		<cfdefaultcase>
 		</cfdefaultcase>
 	</cfswitch>
 
 snippet case
-	<cfcase value="$1">
-		$2
+	<cfcase value="${1}">
+		${2}
 	</cfcase>
 
 snippet if
-	<cfif $1 >
-		$2
+	<cfif ${1} >
+		${2}
 	</cfif>
 snippet ifel
-	<cfif $1 >
-		$2
+	<cfif ${1} >
+		${2}
 	<cfelse>
 	</cfif>
 
 snippet try
 	<cftry>
-		$1
+		${1}
 		<cfcatch type="any e">
 		</cfcatch>
 	</cftry>
 
 snippet sfor
-	for (${1:i} = ${2:0}; $1 LTE $3; $1++) {
-		$4
+	for (${1:i} = ${2:0}; $1 LTE ${3}; $1++) {
+		${4}
 	}
 
 snippet sif
-	if ($1) {
-		$2
+	if (${1}) {
+		${2}
 	}
